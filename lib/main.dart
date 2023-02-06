@@ -37,37 +37,18 @@ class MyApp extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(top: 25),
             ),
-            const Text(
-              'The Last Uf Us',
-              textDirection: TextDirection.ltr,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 40,
-              ),
-            ),
+            texto('The Last Uf Us', Colors.black87, 40),
             const Padding(
               padding: EdgeInsets.only(top: 10),
             ),
-            const Text(
-              'Naugthy Dog',
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                color: Colors.black54,
-                fontSize: 30,
-              ),
-            ),
+            texto('Naugthy Dog', Colors.black54, 30),
             const Padding(
               padding: EdgeInsets.only(top: 15),
             ),
-            const Text(
-              'La historia de The Last of Us gira en torno a un virus nacido por el hongo Cordyceps Unilateralis. Es decir, a diferencia de otros juegos, aquí la naturaleza da el brote que amenaza a la humanidad. Después de recibir esa información, nos transportamos 20 años en el futuro para ser Joel, el protagonista de la historia. Acompañado por Tess, debe vivir en un mundo que no es lo que conocemos.',
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                color: Colors.black45,
-                fontSize: 15,
-              ),
-            ),
+            texto(
+                'La historia de The Last of Us gira en torno a un virus nacido por el hongo Cordyceps Unilateralis. Es decir, a diferencia de otros juegos, aquí la naturaleza da el brote que amenaza a la humanidad. Después de recibir esa información, nos transportamos 20 años en el futuro para ser Joel, el protagonista de la historia. Acompañado por Tess, debe vivir en un mundo que no es lo que conocemos.',
+                Colors.black54,
+                15),
             const Padding(
               padding: EdgeInsets.only(top: 20),
             ),
@@ -84,6 +65,17 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Text texto(String contenido, Color color, double size) {
+    return Text(
+      contenido,
+      textDirection: TextDirection.ltr,
+      style: TextStyle(
+        color: color,
+        fontSize: size,
       ),
     );
   }
